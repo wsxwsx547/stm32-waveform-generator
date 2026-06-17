@@ -4,6 +4,11 @@
 
 基于STM32F103C8T6的多功能波形发生器，支持正弦波、方波、三角波、锯齿波四种波形输出，频率范围10Hz~100kHz，波形精度±1%。独立完成8台验证样机从调试到性能测试的全流程工作。
 
+<p align="center">
+  <img src="Docs/images/hardware_board.png" alt="Hardware Board" width="600">
+  <br><em>图1: 样机硬件实物</em>
+</p>
+
 ## 核心功能
 
 - **四种波形输出**: 正弦波、方波、三角波、锯齿波，无缝切换（<5ms）
@@ -24,6 +29,11 @@ STM32F103C8T6 (72MHz HSE+PLL)
 ├── 按键输入: 3个轻触按键 (PB0/PB1/PB10)
 └── 调试串口: USART1 (PA9/PA10, 115200bps)
 ```
+
+<p align="center">
+  <img src="Docs/images/system_architecture.png" alt="System Architecture" width="600">
+  <br><em>图2: 系统架构框图</em>
+</p>
 
 ## 项目结构
 
@@ -63,6 +73,11 @@ STM32F103C8T6 (72MHz HSE+PLL)
 - 切换时间<5ms，无毛刺或过渡失真
 
 ## 测试成果
+
+<p align="center">
+  <img src="Docs/images/waveform_output.png" alt="Waveform Output" width="600">
+  <br><em>图3: 四种波形输出示波器截图</em>
+</p>
 
 | 指标 | 目标 | 实测 | 结论 |
 |------|------|------|------|
