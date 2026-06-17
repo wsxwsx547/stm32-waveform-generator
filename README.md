@@ -50,6 +50,13 @@ STM32F103C8T6 (72MHz HSE+PLL)
 └── README.md               # 本文件
 ```
 
+## 硬件平台
+
+<p align="center">
+  <img src="Docs/images/hardware_board.png" alt="Hardware Board" width="600">
+  <br><em>图2: 开发板实物图（野火STM32F407）</em>
+</p>
+
 ## 关键技术点
 
 ### 波形生成原理
@@ -71,12 +78,12 @@ STM32F103C8T6 (72MHz HSE+PLL)
 
 <p align="center">
   <img src="Docs/images/waveform_output.png" alt="Waveform Output" width="600">
-  <br><em>图2: 四种波形输出示波器截图</em>
+  <br><em>图3: 四种波形输出示波器截图</em>
 </p>
 
 <p align="center">
   <img src="Docs/images/frequency_response.png" alt="Frequency Response" width="600">
-  <br><em>图3: 频率响应测试结果</em>
+  <br><em>图4: 频率响应测试结果</em>
 </p>
 
 | 指标 | 目标 | 实测 | 结论 |
