@@ -5,8 +5,8 @@
 
 #include "timer.h"
 
-#define SYSTEM_CLOCK  72000000UL
-#define TIM6_PRESCALER 0  /* 不分频, 72MHz */
+#define SYSTEM_CLOCK  168000000UL
+#define TIM6_PRESCALER 0  /* 不分频, 168MHz */
 
 /**
  * @brief  定时器6初始化 (DAC触发源)
@@ -17,7 +17,7 @@ void Timer_Init(uint32_t sampleRate)
     
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM6, ENABLE);
     
-    /* TIM6时钟 = 72MHz / (PSC+1) / (ARR+1) = sampleRate */
+    /* TIM6时钟 = 168MHz / (PSC+1) / (ARR+1) = sampleRate */
     TIM_InitStruct.TIM_Prescaler = TIM6_PRESCALER;
     TIM_InitStruct.TIM_CounterMode = TIM_CounterMode_Up;
     TIM_InitStruct.TIM_Period = (SYSTEM_CLOCK / sampleRate) - 1;

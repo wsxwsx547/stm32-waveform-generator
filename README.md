@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-基于STM32F103C8T6的多功能波形发生器，支持正弦波、方波、三角波、锯齿波四种波形输出，频率范围10Hz~100kHz，波形精度±1%。独立完成8台验证样机从调试到性能测试的全流程工作。
+基于STM32F407IGT6的多功能波形发生器，支持正弦波、方波、三角波、锯齿波四种波形输出，频率范围10Hz~100kHz，波形精度±1%。独立完成8台验证样机从调试到性能测试的全流程工作。
 
 ## 核心功能
 
@@ -16,7 +16,7 @@
 ## 技术架构
 
 ```
-STM32F103C8T6 (72MHz HSE+PLL)
+STM32F407IGT6 (168MHz HSE+PLL)
 ├── 波形生成: 1024点LUT查找表 + 12位DAC (DMA传输)
 ├── 定时触发: TIM6 → DAC TRGO (精确采样率控制)
 ├── 触摸检测: TTP223模块 + PA0 (自研外围电路)
@@ -105,8 +105,8 @@ STM32F103C8T6 (72MHz HSE+PLL)
 ## 开发环境
 
 - **IDE**: Keil MDK v5 (ARM Compiler)
-- **MCU**: STM32F103C8T6 (Cortex-M3, 72MHz)
-- **固件库**: STM32F10x Standard Peripheral Library
+- **MCU**: STM32F407IGT6 (Cortex-M4F, 168MHz)
+- **固件库**: STM32F4xx Standard Peripheral Library
 - **测试仪器**: Tektronix TDS2024C示波器、Fluke 17B+万用表
 - **PCB设计**: Multisim原理图 + ORCAD PCB
 

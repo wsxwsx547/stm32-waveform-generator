@@ -3,11 +3,11 @@
  * @brief   STM32嵌入式波形发生器 - 主程序
  * @author  吴士喜
  * @date    2024-01
- * @note    基于STM32F103C8T6，支持正弦波/方波/三角波/锯齿波输出
+ * @note    基于STM32F407IGT6，支持正弦波/方波/三角波/锯齿波输出
  *          波形精度±1%，频率范围10Hz~100kHz
  */
 
-#include "stm32f10x.h"
+#include "stm32f4xx.h"
 #include "waveform.h"
 #include "dac_driver.h"
 #include "timer.h"
@@ -16,7 +16,7 @@
 #include "oled_display.h"
 
 /* 系统配置 */
-#define SYSTEM_CLOCK        72000000UL   /* 72MHz主频 */
+#define SYSTEM_CLOCK        168000000UL  /* 168MHz主频 */
 #define DEFAULT_FREQUENCY   1000         /* 默认频率1kHz */
 #define DEFAULT_AMPLITUDE   3300         /* 默认幅值3.3V (mV) */
 #define DEFAULT_WAVEFORM    WAVE_SINE    /* 默认波形：正弦 */
@@ -28,7 +28,7 @@ static uint32_t g_currentFrequency = DEFAULT_FREQUENCY;
 static uint16_t g_currentAmplitude = DEFAULT_AMPLITUDE;
 
 /**
- * @brief  系统时钟配置 - 72MHz HSE + PLL
+ * @brief  系统时钟配置 - 168MHz HSE + PLL
  */
 static void SystemClock_Config(void)
 {
@@ -145,7 +145,7 @@ int main(void)
     OLED_ShowString(0, 2, "Initializing...");
     UART_Debug_Printf("STM32 Waveform Generator v1.0\r\n");
     UART_Debug_Printf("Author: Wu Shixi\r\n");
-    UART_Debug_Printf("System Clock: 72MHz\r\n");
+    UART_Debug_Printf("System Clock: 168MHz\r\n");
     
     Delay_ms(1000);
     
