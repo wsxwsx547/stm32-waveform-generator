@@ -74,16 +74,23 @@ STM32F103C8T6 (72MHz HSE+PLL)
 - 切换波形时仅更新DMA缓冲区内容，不中断TIM6触发
 - 切换时间<5ms，无毛刺或过渡失真
 
+## 软件设计
+
+<p align="center">
+  <img src="Docs/images/program_flowchart.png" alt="Program Flowchart" width="450">
+  <br><em>图3: 程序流程图</em>
+</p>
+
 ## 测试成果
 
 <p align="center">
   <img src="Docs/images/waveform_output.png" alt="Waveform Output" width="600">
-  <br><em>图3: 四种波形输出示波器截图</em>
+  <br><em>图4: 四种波形输出示波器截图</em>
 </p>
 
 <p align="center">
   <img src="Docs/images/frequency_response.png" alt="Frequency Response" width="600">
-  <br><em>图4: 频率响应测试结果</em>
+  <br><em>图5: 频率响应测试结果</em>
 </p>
 
 | 指标 | 目标 | 实测 | 结论 |
